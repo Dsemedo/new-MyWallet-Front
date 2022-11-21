@@ -19,7 +19,6 @@ export default function Statement() {
     };
 
     axios.get("http://localhost:5000/statement", config).then((res) => {
-      console.log(res.data);
       setUsername(res.data.name);
       setTransactions(res.data.transactions);
     });
